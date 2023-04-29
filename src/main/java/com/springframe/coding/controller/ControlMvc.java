@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class ControlMvc {
     private ServiceGoogleApisQrcode serviceGoogleApisQrcode;
-    @GetMapping(value = "/")
+    @GetMapping(value = "/home")
     private String toHome(Model model) {
         String message = "not found qrcode";
         model.addAttribute("message", message);
@@ -21,7 +21,7 @@ public class ControlMvc {
     private String takeQrcodeToHome(@ModelAttribute Qrcode qrcode , Model model) {
         serviceGoogleApisQrcode = new ServiceGoogleApisQrcode(qrcode.getLength(),qrcode.getInfo(),qrcode.getColor());
         // plot check
-        System.out.println(serviceGoogleApisQrcode.getApis());
+        // System.out.println(serviceGoogleApisQrcode.getApis());
         model.addAttribute("qrcode",serviceGoogleApisQrcode.getApis());
         return "home";
     }

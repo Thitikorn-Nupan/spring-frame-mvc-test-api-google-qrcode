@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link"  href="/Apis/">Home</a>
+                        <a class="nav-link"  href="home">Home</a>
                     </li>
                 </ul>
             </div>
