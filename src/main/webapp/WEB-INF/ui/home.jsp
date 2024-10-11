@@ -1,5 +1,7 @@
+<%--<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>--%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -31,7 +33,7 @@
 <!-- menu -->
 <!-- form -->
 <div class="container mt-3 p-lg-5 shadow">
-    <form action="form-qrcode" method="post">
+    <form action="home" method="post">
         <div class="alert text-center">
             <strong>Test Qrcode Google Apis</strong>
         </div>
@@ -64,14 +66,14 @@
             </div>
         </div>
 
-        <div class="">
+        <%--<div class="">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" >Choose the colors</label>
                 </div>
                 <input class="form-control-color" type="color" name="color" style="width: 1069px;;" required>
             </div>
-        </div>
+        </div>--%>
 
 
         <div class="control-btn">
@@ -85,14 +87,16 @@
 <!-- form -->
 
 <!-- result -->
-<div class="container mt-3">
-    <div class="alert text-center">
-        <strong>${message}</strong>
+<c:if test="${qrcode != null}">
+    <div class="container mt-3">
+        <div class="alert text-center">
+            <strong>${message}</strong>
+        </div>
+        <div class="shadow p-md-5 text-center" id="qrcode">
+            <img src="${qrcode}">
+        </div>
     </div>
-    <div class="shadow p-md-5 text-center" id="qrcode">
-        <img src="${qrcode}">
-    </div>
-</div>
+</c:if>
 <!-- result -->
 </body>
 </html>

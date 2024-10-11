@@ -1,0 +1,5 @@
+com\springframe\coding\configmvc\ConfigurationWeb.class
+com\springframe\coding\configservlet\WebServletConfig.class
+com\springframe\coding\controller\ControlMvc.class
+com\springframe\coding\entity\Qrcode.class
+com\springframe\coding\service\ServiceGoogleApisQrcode.class

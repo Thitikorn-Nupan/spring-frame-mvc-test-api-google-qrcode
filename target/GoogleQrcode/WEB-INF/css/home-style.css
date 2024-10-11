@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+#qrcode{
+    max-width: 600px;
+    margin: 0 auto;
+}
+#length-text {
+    display: inline-block;
+}
+.container-fluid {
+    max-width: 350px;
+    margin: 0 auto;
+}
